@@ -17,6 +17,6 @@ jobs:
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       env:
-        SONAR_TOKEN: 508915bbb92e607dd56acfa3b120e6a659cc6598
-        SONAR_HOST_URL: http://10.10.146.167:9000/
-        PROJECT_KEY: b561f1d433f06c5236eaafdb8644c41ae61ec8ca
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        PROJECT_KEY: 9118295e25e44566bc5b54b81f5981460ec22bab
