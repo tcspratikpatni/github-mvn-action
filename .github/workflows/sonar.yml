@@ -17,6 +17,6 @@ jobs:
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        PROJECT_KEY: 9118295e25e44566bc5b54b81f5981460ec22bab
+        SONAR_TOKEN: 2f68bd9a1723ccf316a13fca7508d39f88fb8b7a
+        SONAR_HOST_URL: http://10.10.146.167:9000 \
+        PROJECT_KEY: github-testing
