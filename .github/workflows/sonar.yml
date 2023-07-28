@@ -1,22 +1,28 @@
 on:
-  # Trigger analysis when pushing to your main branches, and when creating a pull request.
+  # Trigger analysis when pushing in master or pull requests, and when creating
+  # a pull request. 
   push:
     branches:
       - main
   pull_request:
       types: [opened, synchronize, reopened]
-name: Main Workflow
+
+ 
+
+name: SonarQube Scan
 jobs:
   sonarqube:
+    name: SonarQube Trigger
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Checking out
+      uses: actions/checkout@master
       with:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
     - name: SonarQube Scan
-      uses: sonarsource/sonarqube-scan-action@master
-      env:
-        SONAR_TOKEN: 2f68bd9a1723ccf316a13fca7508d39f88fb8b7a
-        SONAR_HOST_URL: http://10.10.146.167:9000\
-        PROJECT_KEY: github-testing
+      uses: kitabisa/sonarqube-action@v1.2.0
+      with:
+        host: http://10.10.146.167:9000 \
+        login: 479c2dcabba0e806f227b603a78013fcefb7eef3
+        projectkey: test1
