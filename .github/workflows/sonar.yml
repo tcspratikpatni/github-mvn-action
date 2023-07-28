@@ -23,6 +23,6 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.2.0
       with:
-        host: http://10.10.146.167:9000 \
+        host: https://sq-cv.titan.in/
         login: 479c2dcabba0e806f227b603a78013fcefb7eef3
         projectkey: test1
