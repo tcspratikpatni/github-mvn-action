@@ -18,5 +18,5 @@ jobs:
       uses: sonarsource/sonarqube-scan-action@master
       env:
         SONAR_TOKEN: 2f68bd9a1723ccf316a13fca7508d39f88fb8b7a
-        SONAR_HOST_URL: http://10.10.146.167:9000 \
+        SONAR_HOST_URL: http://10.10.146.167:9000\
         PROJECT_KEY: github-testing
